@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugestões</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <header id="inicio">
+        <div class="logo">
+            <h1>DT</h1>
+            <h2>Detox Digital</h2>
+        </div>
+     <nav class="nav-bar">
+    <!-- Início -->
+    <div class="dropdown">
+        <a href="index.html" class="dropbtn">
+            Início <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </div>
+
+    <!-- Questionário -->
+    <a href="questionario.html" class="menu-link">Questionário</a>
+
+    <!-- Impactos -->
+    <div class="dropdown">
+        <a href="impactos.html" class="dropbtn">
+            Impactos <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="complementar.html">sono</a>
+            <a href="complementar2.html">saude mental</a>
+            <a href="complementar3.html">produtividade</a>
+        </div>
+    </div>
+
+    <!-- Sugestões -->
+    <div class="dropdown">
+        <a href="sugestoes.html" class="dropbtn">
+            Sugestões <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="complementar4.html">limite de tempo</a>
+            <a href="complementar5.html">pausas</a>
+            <a href="complementar6.html">telas a noite</a>
+        </div>
+    </div>
+
+    <!-- Estudo & Bem-estar -->
+    <div class="dropdown">
+        <a href="estudoebemestar.html" class="dropbtn">
+            Estudo & Bem-estar <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="complementar7.html">dicas</a>
+            <a href="complementar8.html">bem estar</a>
+        </div>
+    </div>
+</nav>
+
+        <div class="menu-toggle" onclick="document.querySelector('.nav-bar').classList.toggle('show')">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    </header>
+    <script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navBar = document.querySelector('.nav-bar');
+
+menuToggle.addEventListener('click', () => {
+    navBar.classList.toggle('show');
+});
+</script>
+     <main class="sim">
+        
+        <div class="texto-principal">
+            <h2 >Sugestões para um Uso <span style="color: #7181cb;">Equilibrado</span> de Telas</h2>
+            <p>Pequenas mudanças podem trazer grandes benefícios para sua saúde e produtividade.</p>
+            <a  href="#saiba">Saiba Mais</a>
+        </div>
+        <img class="sigma"  src="img/ilustracao-em-vetor-conceito-abstrato-de-privacao-de-sono-sintoma-de-insonia-perda-de-sono-problema-de-privacao-saude-mental-causa-e-tratamento-diagnostico-clinico-metafora-abstrata-de-insonia.png" alt="">
+    </main>
+     <section class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span>Sugestões</span></h2>
+        <p style="margin: auto auto;">O uso excessivo de telas pode impactar negativamente o desenvolvimento infantil, a saúde mental e física, levando a problemas como ansiedade, sedentarismo, dificuldades de concentração e problemas de sono</p>
+        <div  class="cards2">
+            <div class="card1">
+                <img style="width: 100px; margin-bottom: 10px;" src="img/wall-clock.png" alt="">
+                <h2>Defina limites de tempo </h2>
+                <p> estabelecer um período de tempo</p>
+                <a href="complementar4.html">veja mais</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/video-pause-button.png" alt="">
+                <h2>Priorize pausas</h2>
+                <p>Priorizar pausas é fundamental  </p>
+                <a href="complementar5.html">veja mais</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/no-phone.png" alt="">
+                <h2>Evite telas antes de dormir</h2>
+                <p>  melhora a qualidade e a duração do sono</p>
+                <a href="complementar6.html">veja mais</a>
+            </div>
+             
+        </div>
+         <div  style="margin-top: 7%;" class="prin">
+        <h1><img style="width: 50px; margin-right: 15px;" src="img/danger.png" alt=""><span style="color: #7181cb;">dicas</span>   extras</h1>
+        <p>veja mais dicas para o sua saude e bem estar</p>
+        <button id="btn-dica">clique aqui</button>
+        </div>
+    </section>
+      <section class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span>Guias Detalhados</span></h2>
+        <p style="margin: auto auto;">O uso excessivo de telas pode impactar negativamente o desenvolvimento infantil, a saúde mental e física, levando a problemas como ansiedade, sedentarismo, dificuldades de concentração e problemas de sono</p>
+        <div style="align-items: flex-start; gap: 80px; margin-bottom: 10%;"  class="cards2" >
+            <div class="card1" style="border: none; height: auto;">
+                
+                <h2 style="margin-bottom: 30px;"><img style="width: 30px; margin-right: 10px;" src="img/checked.png" alt=""> Configure seu ambiente </h2>
+                 
+        
+        <div class="dicass">
+            
+            <ul style="text-align: center;">
+                <li> Posicione a tela ao nível dos olhos</li>
+                <li>Mantenha distância de 50-70cm da tela</li>
+                <li> Use iluminação adequada (evite reflexos)</li>
+                <li>Ajuste brilho e contraste confortavelmente</li>
+                
+            </ul>
+        </div>
+   
+            </div>
+                 <div class="card1" style="border: none; height: auto;">
+                
+                <h2 style="margin-bottom: 30px;"><img style="width: 30px; margin-right: 10px;" src="img/checked.png" alt=""> Técnicas de produtividade </h2>
+                 
+        
+        <div class="dicass">
+            
+            <ul style="text-align: center;">
+                <li>Use a técnica Pomodoro (25min trabalho + 5min pausa)</li>
+                <li>Alterne entre tarefas digitais e analógicas</li>
+                <li> Defina horários específicos para e-mails</li>
+                <li>
+Use aplicativos de bloqueio para sites distrativos</li>
+               
+            </ul>
+        </div>
+   
+            </div>
+                 <div class="card1" style="border: none; height: auto;">
+                
+                <h2 style="margin-bottom: 30px;"><img style="width: 30px; margin-right: 10px;" src="img/checked.png" alt=""> Cuidados com a postura </h2>
+                 
+        
+        <div class="dicass">
+            
+            <ul style="text-align: center;">
+                <li>Mantenha os pés apoiados no chão</li>
+                <li>Ombros relaxados e costas retas</li>
+                <li>Punhos em posição neutra ao digitar</li>
+                <li>Faça alongamentos a cada hora</li>
+               
+            </ul>
+        </div>
+   
+            </div>
+             
+        </div>
+          <section class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span>Aplicativos Recomendados</span></h2>
+        <p style="margin: auto auto;">Intervenções com eficácia cientificamente comprovada</p>
+        <div class="cards">
+            <div class="card1">
+                <img style="width: 100px; margin-bottom: 10px;" src="img/nature.png" alt="">
+                <h2>Forest</h2>
+                <p style="width: 300px;">Cultiva uma floresta virtual enquanto você fica longe do celular</p>
+                <a style="background-color: #7181cb; color: white; border-radius: 20px; text-decoration: none; padding: 5px;" href="questionario.html">Foco</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/app-development.png" alt="">
+                <h2>f.lux / Night Shift</h2>
+                <p style="width: 300px;">Ajusta automaticamente a temperatura de cor da tela</p>
+                <a  style="background-color: #7181cb; color: white; border-radius: 20px; text-decoration: none; padding: 5px;" href="impactos.html">Saúde Visual</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/monitor.png" alt="">
+                <h2>RescueTime</h2>
+                <p style="width: 300px;">Monitora e analisa como você usa seu tempo digital</p>
+                <a  style="background-color: #7181cb; color: white; border-radius: 20px; text-decoration: none; padding: 5px;" href="sugestoes.html">Monitoramento</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/yoga.png" alt="">
+                <h2>Headspace</h2>
+                <p style="width: 300px;">Meditação guiada para reduzir ansiedade digital</p>
+                <a  style="background-color: #7181cb; color: white; border-radius: 20px; text-decoration: none; padding: 5px;" href="estudoebemestar.html">Bem-estar</a>
+            </div>
+        </div>
+    </section>
+    </section>
+      <section style="margin-bottom: 9%;" class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span style="color: #7181cb;">Curiosidade</span></h2>
+        <p style="margin: auto auto;">Estudos mostram que pequenas pausas de 5 a 10 minutos a cada hora de uso de telas podem aumentar a produtividade e reduzir a fadiga ocular. Ou seja, mesmo que passamos muito tempo conectados, fazer intervalos curtos para descansar os olhos, alongar o corpo ou apenas olhar para o ambiente ao redor ajuda o cérebro a se recuperar, melhora a concentração e até diminui o estresse. É um jeito simples de usar a tecnologia de forma mais saudável sem precisar se desconectar completamente.</p>
+     
+        
+    </section>
+      <section style="margin-top: 3%;" class="video">
+        <h2 style="text-align: center;  margin-bottom: 30px;"><span>Roteiro para estudo e bem-estar </span></h2>
+        <p style="margin-bottom: 40px;">Descubra como melhorar sua saúde, produtividade e bem-estar digital</p>
+        <div class="paia">
+        <ul style="color: white;">
+            <li><img style="width: 30px;" src="img/check.png" alt=""> Estudo com tela: até 4h por dia, dividido em blocos.</li>
+            <li ><img style="width: 30px;" src="img/check.png" alt="">Lazer em tela: até 2h/dia.</li>
+            <li><img style="width: 30px;" src="img/check.png" alt="">Offline: caminhada, exercícios, leitura, tempo com amigos.</li>
+            <li><img style="width: 30px;" src="img/check.png" alt="">Antes de dormir: evitar telas por pelo menos 1h.</li>
+        </ul>
+        </div>
+    </section>
+     <section class="frase">
+        <h2 style="border-bottom: 2px solid #7181cb ;">E como isso   <span style="color: #7181cb;">afeta</span>    os adolescentes? </h2>
+        <a href="estudoebemestar.html">ir para estudo e bem estar</a>
+    </section>
+   
+       <footer style="margin-top: 150px;">
+        <div class="redes">
+        <a href="#">
+            <img style="width: 30px;" src="img/twitter.png" alt="">
+        </a>
+        <a href="#">
+            <img style="width: 30px;" src="img/facebook.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/detoxdigital.ifc/"target="_blank">
+            <img style="width: 30px;" src="img/instagram.png" alt="">
+        </a>
+        </div>
+        <div class="mapa">
+            <a href="index.html">Início</a>
+            <a href="questionario.html">Questionário</a>
+            <a href="impactos.html">Impactos</a>
+            <a href="sugestoes.html">Sugestões</a>
+            <a href="estudoebemestar.html">Estudo & Bem-estar</a>
+        </div>
+        <p style="color: white;">©Detox Digital.Todos os direitos reservados.</p>
+    </footer>
+         <script src="js/index.js"></script>
+         <script src="js/munu.js"></script>
+</body>
+</html>

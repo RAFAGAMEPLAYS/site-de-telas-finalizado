@@ -1,0 +1,1031 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.logo h1{
+    background-color: #7181cb;
+    color: white;
+    padding: 6%;
+    border-radius: 50%;
+    text-align: center;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.nav-bar a:hover{
+    border-bottom:2px solid #7181cb ;
+    
+    
+}
+main{
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 7%;
+    justify-content: center;
+   
+}
+.texto-principal h2{
+    font-size: 47px;
+    width: 557px;
+    color: black;
+    margin-bottom: 20px;
+}
+.texto-principal p{
+    font-size: 20px;
+    color: #56535e;
+    width: 446px;
+    margin-bottom: 40px;
+}
+.texto-principal a{
+    text-decoration: none;
+    font-size: 19px;
+    background-color:#7181cb ;
+    color: white;
+    padding: 3% 5% 3% 5%;
+    border-radius: 30px;
+
+}
+.texto-principal a:hover{
+    background-color: #5264b8;
+    
+}
+.resumo h2 span{
+font-size: 36px;
+border-bottom: 2px solid #7181cb;
+padding-bottom: 5px;
+
+
+}
+.resumo p{
+    text-align: center;
+    color:#56535e ;
+    font-size: 18px;
+    width: 952px;
+    
+}
+.cards{
+      display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 70px; /* aqui você pode aumentar sem medo */
+  max-width: 700px; /* largura máxima do grid */
+  margin: 40px auto; /* centraliza na tela */
+  justify-content: center;
+    margin-top: 5%;
+      row-gap: 40px; 
+      margin-bottom: 10%;
+}
+.card1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid  #7181cb ;
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.card1 h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.card1 p{
+    font-size: 17px;
+    color: #56535e;
+    margin-bottom: 10px;
+}
+.card1 a{
+    color: #7181cb;
+}
+.video h2 span{
+font-size: 36px;
+border-bottom: 2px solid #ffffff;
+padding-bottom: 5px;
+color: white;}
+
+.video{
+    background-color: #7181cb;
+    
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 1000px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+}
+.paia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.video p{
+    text-align: center;
+    color:#ffffff ;
+    font-size: 18px;
+    
+}
+footer{
+    background-color: #7181cb;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 16%;
+}
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+.mapa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+.mapa a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+.quest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+}
+.quest h1{
+    font-size: 47px;
+    margin-bottom: 25px;
+}
+.quest h1 span{
+    border-bottom: 2px solid #5264b8;
+}
+.quest p{
+    font-size: 18px;
+    width:  952px ;
+    text-align: center;
+}
+.formulario {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+ border: 2px solid #7181cb ;
+}
+
+/* Títulos de cada pergunta */
+.pergunta {
+  margin-bottom: 20px;
+}
+
+.pergunta label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+  font-size: 18px;
+}
+
+/* Inputs padrão */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #7181cb; /* deixa botões na cor principal */
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  
+}
+
+select:focus {
+  border-color: #7181cb;
+  
+}
+
+/* Botão enviar */
+button {
+  background: #7181cb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 17px;
+  
+  cursor: pointer;
+ font-weight: bold;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background: #5a68a6;
+ 
+}
+.frase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 9%;
+}
+.frase h2{
+    font-size: 25px;
+    border-bottom: 2px dashed #7181cb ;
+    
+    
+}
+.frase a{
+    text-decoration: none;
+    font-size: 19px;
+    background-color:#7181cb ;
+    color: white;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.prin{
+    margin: 0 auto;
+    
+}
+.prin h1{
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+.prin p{
+    font-size: 20px;
+    color: #56535e;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.prin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.prin a{
+    text-decoration: none;
+  color: #7181cb;
+  border: 1px solid #7181cb;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 17px;
+  width: 200px;
+  cursor: pointer;
+ font-weight: bold;
+ text-align: center;
+ margin-bottom: 5%;
+  
+ 
+}
+.prin button{
+    text-decoration: none;
+  color: #7181cb;
+  border: 1px solid #7181cb;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 17px;
+  width: 200px;
+  cursor: pointer;
+ font-weight: bold;
+ text-align: center;
+ margin-bottom: 5%;
+ background: white;
+}
+.cards2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    overflow: hidden;
+    margin-top: 5%;
+}
+.sim{
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 7%;
+    justify-content: center;
+}
+.paia ul{
+    list-style: none;
+    
+}
+.paia ul li{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.tabela{
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    margin-top: 9%;
+}
+.sintomas ul{
+    list-style: none;
+}
+.sintomas h2 span{
+    border-bottom:2px solid #7181cb ;
+}
+.sintomas h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.sintomas ul li{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.dicas h2 span{
+    border-bottom:2px solid #7181cb ;
+}
+.dicas h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.dicas ul li{
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.dicas ul{
+    list-style: none;
+}
+.dicas ul li::before {
+      content: "\2022"; /* Caractere de um ponto (bullet) */
+      color:#7181cb ; /* Mude para a cor desejada, por exemplo, azul */
+      display: inline-block;
+      width: 1em; /* Ajuste a largura do marcador */
+      margin-left: -1em; /* Ajuste para alinhamento */
+    }
+ .dicass h2 span{
+    border-bottom:2px solid #7181cb ;
+}
+.dicass h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.dicass ul li{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.dicass ul{
+    list-style: none;
+}
+.dicass ul li::before {
+      content: "\2022"; /* Caractere de um ponto (bullet) */
+      color:#7181cb ; /* Mude para a cor desejada, por exemplo, azul */
+      display: inline-block;
+      width: 1em; /* Ajuste a largura do marcador */
+      margin-left: -1em; /* Ajuste para alinhamento */
+    }
+   
+    .texto-principall a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #7181cb;
+  color: white;
+  padding: 12px 28px;   /* aumenta o tamanho */
+  border-radius: 30px;
+  font-weight: bold;
+  min-width: 160px;     /* garante largura mínima */
+  text-align: center;   /* centraliza o texto */
+  transition: background 0.3s;
+}
+.texto-principal a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #7181cb;
+  color: white;
+  padding: 12px 28px;   /* aumenta o tamanho */
+  border-radius: 30px;
+  font-weight: bold;
+  min-width: 160px;     /* garante largura mínima */
+  text-align: center;   /* centraliza o texto */
+  transition: background 0.3s;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  background: #7181cb;
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+}
+.lolo{
+   width: 693px;
+   height: 598px;
+}
+.sigma{
+     width: 693px;
+   height: 598px;
+}
+.gato{
+     width: 550px;
+   height: 550px;
+}
+.tobi{
+     width: 550px;
+   height: 550px;
+}
+.papa{
+    width: 650px;
+    line-height: 30px;
+}
+/* Container do formulário */
+.form-container {
+  background: #f9faff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 30px auto;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Títulos das perguntas */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.form-group input[type="email"]:focus {
+  border-color: #7181cb;
+  box-shadow: 0 0 5px rgba(113, 129, 203, 0.4);
+}
+
+/* Agrupamento das opções */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.options label {
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.options label:hover {
+  background: #7181cb;
+  color: #fff;
+  border-color: #7181cb;
+}
+
+/* Esconde o input padrão mas mantém acessibilidade */
+.options input {
+  margin-right: 6px;
+  accent-color: #7181cb; /* cor dos radio/checkbox no navegador moderno */
+}
+
+/* Botão */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #7181cb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: #5b6bb5;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* mais espaçamento entre itens */
+    font-family: Arial, sans-serif;
+}
+
+.menu-link {
+    text-decoration: none; /* remove sublinhado */
+    color: #2b2b2b;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.3s;
+}
+
+.menu-link:hover {
+    color: #7181cb;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: transparent;
+    border: none;
+    color: #2b2b2b;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 0;
+    transition: color 0.3s;
+    text-decoration: none; /* remove sublinhado azul */
+}
+
+.dropbtn:hover {
+    color: #7181cb;
+}
+
+.arrow {
+    font-size: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* submenu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 150px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: #2b2b2b;
+    padding: 10px 14px;
+    text-decoration: none; /* remove sublinhado azul */
+    display: block;
+    transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #7181cb;
+}
+
+.show {
+    display: block;
+}
+.jojo{
+ width: 560px;
+ height: 415px;
+}
+.gordo{
+  width: 800px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    color: #2b2b2b;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    padding: 8px 10px;
+    transition: 0.3s;
+}
+
+.dropbtn:hover {
+    color: #7181cb;
+}
+
+.arrow {
+    font-size: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: #2b2b2b;
+    padding: 10px 14px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #7181cb;
+}
+
+.show {
+    display: block;
+}
+/* ===== MENU SUSPENSO (HOVER) ===== */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    color: #2b2b2b;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    padding: 8px 10px;
+    transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+    color: #7181cb;
+}
+
+.arrow {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Conteúdo do menu suspenso */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+/* Mostra o menu ao passar o mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Links dentro do menu */
+.dropdown-content a {
+    color: #2b2b2b;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #7181cb;
+}
+
+/* Faz a setinha girar quando o menu abre */
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+/* Menu toggle (hamburguer) */
+.menu-toggle {
+    display: none; /* escondido por padrão em telas grandes */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #2b2b2b;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Responsivo */
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-bar.show {
+        display: flex;
+    }
+
+    /* Não mostrar os dropdown-content no mobile */
+    .dropdown .dropdown-content {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: #2b2b2b;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 430px){
+    .logo{
+        font-size: 15px;
+    }
+      header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px;
+  }
+
+  .nav-bar {
+    display: none;
+    flex-direction: column;
+    background: #7181cb;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .nav-bar.show {
+    display: flex;
+  }
+
+  .nav-bar a {
+    color: white;
+    padding: 12px 0;
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+  .lolo{
+    width: 350px;
+    height: 350px;
+  }
+  main{
+    flex-direction: column;
+  }
+  .texto-principal h2{
+    text-align: center;
+    width: 350px;
+    font-size: 30px;
+    margin:  0 auto;
+  }
+  .texto-principal p{
+    text-align: center;
+    width: 350px;
+    font-size: 20px;
+    margin:  0 auto;
+  }
+  .texto-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #saiba span{
+     text-align: center;
+    width: 350px;
+    font-size: 30px;
+    margin:  0 auto;
+  }
+  .resumo p{
+     text-align: center;
+    width: 350px;
+    font-size: 20px;
+    margin:  0 auto;
+  }
+  .resumo{
+    gap: 20px;
+  }
+  .cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .video{
+    width: 350px;
+    
+  }
+  .video iframe{
+    width: 300px;
+  }
+ footer{
+    width: 100%;
+    height: 150px;
+ }
+ .mapa{
+    display: none;
+    
+  
+ }
+.quest h1{
+    text-align: center;
+}
+.quest img{
+    display: none;
+}
+.quest p{
+     text-align: center;
+    width: 350px;
+    font-size: 20px;
+    margin:  0 auto;
+}
+.frase h2{
+    text-align: center;
+    width: 350px;
+    font-size: 30px;
+    margin:  0 auto;
+}
+.prin h1{
+     text-align: center;
+    width: 350px;
+    
+    margin:  0 auto;
+}
+.prin img{
+    display: none;
+}
+.cards2{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tabela{
+    margin: 0 auto;
+    width: 350px;
+    
+}
+.sigma{
+     width: 350px;
+    height: 350px;
+}
+.texto-principal ul{
+    text-align: center;
+}
+.texto-principall{
+    text-align: center;
+}
+.gato{
+ width: 350px;
+    height: 350px;
+}
+.tobi{
+     width: 350px;
+    height: 350px;
+}
+.prin{
+    width: 350px;
+}
+.prin .papa{
+    width: 350px;
+}
+.tabela{
+  flex-direction: column;
+  gap: 35px;
+}
+.dicass{
+  margin-left: 15px;
+}
+.texto-principal a{
+  margin-top: 25px;
+}
+.jojo{
+  width: 300px;
+  height: 300px;
+}
+.gordo{
+  width: 350px;
+}
+}
+ 
+
+ 
+ 
+
+
+
+    
+    

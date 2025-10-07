@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>impactos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="inicio">
+        <div class="logo">
+            <h1>DT</h1>
+            <h2>Detox Digital</h2>
+        </div>
+  <nav class="nav-bar">
+    <!-- Início -->
+    <div class="dropdown">
+        <a href="index.html" class="dropbtn">
+            Início <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </div>
+
+    <!-- Questionário -->
+    <a href="questionario.html" class="menu-link">Questionário</a>
+
+    <!-- Impactos -->
+    <div class="dropdown">
+        <a href="impactos.html" class="dropbtn">
+            Impactos <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="complementar.html">sono</a>
+            <a href="complementar2.html">saude mental</a>
+            <a href="complementar3.html">produtividade</a>
+        </div>
+    </div>
+
+    <!-- Sugestões -->
+    <div class="dropdown">
+        <a href="sugestoes.html" class="dropbtn">
+            Sugestões <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="complementar4.html">limite de tempo</a>
+            <a href="complementar5.html">pausas</a>
+            <a href="complementar6.html">telas a noite</a>
+        </div>
+    </div>
+
+    <!-- Estudo & Bem-estar -->
+    <div class="dropdown">
+        <a href="estudoebemestar.html" class="dropbtn">
+            Estudo & Bem-estar <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="complementar7.html">dicas</a>
+            <a href="complementar8.html">bem estar</a>
+        </div>
+    </div>
+</nav>
+
+        <div class="menu-toggle" onclick="document.querySelector('.nav-bar').classList.toggle('show')">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+
+
+
+  
+    </header>
+    <script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navBar = document.querySelector('.nav-bar');
+
+menuToggle.addEventListener('click', () => {
+    navBar.classList.toggle('show');
+});
+</script>
+    <main class="impact">
+        
+        <div class="prin">
+        <h1><img style="width: 50px; margin-right: 15px;" src="img/danger.png" alt=""><span style="color: #7181cb;">Impactos</span>  do Uso Excessivo de Telas</h1>
+        <p>Descubra como o excesso pode afetar seu sono, produtividade e saúde mental.</p>
+        <a href="#saiba">ver mais</a>
+        </div>
+        
+    </main>
+    
+     <section class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span>impactos</span></h2>
+        <p style="margin: auto auto;">O uso excessivo de telas tem um impacto negativo na saúde física e mental, afetando o sono, causando problemas de visão, dores musculares e alterando o cérebro, especialmente em crianças e adolescentes, que pode levar a alterações comportamentais, ansiedade e depressão.</p>
+        <div  class="cards2">
+            <div class="card1">
+                <img style="width: 100px; margin-bottom: 10px;" src="img/sleeping.png" alt="">
+                <h2>Sono</h2>
+                <p>insônia, dificuldade para descansar.</p>
+                <a href="complementar.html">veja mais</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/mental-health.png" alt="">
+                <h2>Saúde Mental</h2>
+                <p>ansiedade, estresse, dependência digital.</p>
+                <a href="complementar2.html">veja mais</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/working.png" alt="">
+                <h2>Produtividade</h2>
+                <p>menos foco nos estudos mais distrações.</p>
+                <a href="complementar3.html">veja mais</a>
+            </div>
+             
+        </div>
+        
+    </section>
+     <section style="margin-top: 10%;" class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span>Impacto por Faixa Etária</span></h2>
+        <p style="margin: auto auto;">Diferentes grupos etários enfrentam desafios específicos</p>
+        <div style="gap: 120px;" class="cards">
+            <div style="height: auto; border: none;" class="card1">
+                <img style="width: 100px; margin-bottom: 10px;" src="img/criancas.png" alt="">
+                <h2>Crianças (6-12 anos)</h2>
+                <p style="color: black;">Principais riscos:</p>
+                <p style="width: 300px;">Desenvolvimento cognitivo, problemas de atenção, obesidade</p>
+                                <p style="color: black;">Recomendação:</p>
+
+               <a style="text-decoration: none;" href="questionario.html">Máximo 3h/dia com zonas livres de tela</a>
+            </div>
+              <div style="height: auto; border: none;" class="card1">
+                <img style="width: 100px; margin-bottom: 10px;" src="img/adolescencia.png" alt="">
+                <h2>Adolescentes (13-17 anos)</h2>
+                <p style="color: black;">Principais riscos:</p>
+                <p style="width: 300px;">Depressão, ansiedade, problemas de sono, cyberbullying</p>
+                                <p style="color: black;">Recomendação:</p>
+
+                <a style="text-decoration: none;" href="questionario.html">Máximo 3h/dia com zonas livres de tela</a>
+            </div>
+              <div style="height: auto; border: none;" class="card1">
+                <img style="width: 100px; margin-bottom: 10px;" src="img/casal.png" alt="">
+                <h2> Adultos (18-64 anos)</h2>
+                <p style="color: black;">Principais riscos:</p>
+                <p style="width: 300px;">Burnout, problemas posturais, fadiga visual, estresse</p>
+                                <p style="color: black;">Recomendação:</p>
+
+                <a style="text-decoration: none;" href="questionario.html">Pausas a cada 20min, limite após trabalho</a>
+            </div>
+              <div style="height: auto; border: none;" class="card1">
+                <img style="width: 100px; margin-bottom: 10px;" src="img/velho.png" alt="">
+                <h2> Idosos (65+ anos)</h2>
+                <p style="color: black;">Principais riscos:</p>
+                <p style="width: 300px;">Isolamento social, problemas cognitivos, sedentarismo</p>
+                                <p style="color: black;">Recomendação:</p>
+
+              <a style="text-decoration: none;" href="questionario.html">Uso balanceado com atividades presenciais</a>
+            </div>
+        </div>
+    </section>
+     <section style="margin-top: 10%;" class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span>Sinais de Alerta</span></h2>
+        <p style="margin: auto auto;">Quando buscar ajuda profissional</p>
+      
+    </section>
+    <section style="margin-top: 100px; margin-bottom: 10%;" class="tabela">
+        <div class="sintomas">
+            <h2> Sinais Físicos </h2>
+            <ul>
+                <li><img style="width: 30px; margin-right: 10px;" src="img/danger.png" alt="">Dores de cabeça constantes</li>
+                 <li><img style="width: 30px; margin-right: 10px;" src="img/danger.png" alt=""> Visão embaçada persistente</li>
+                  <li><img style="width: 30px; margin-right: 10px;" src="img/danger.png" alt="">Dores crônicas no pescoço/costas</li>
+                   <li><img style="width: 30px; margin-right: 10px;" src="img/danger.png" alt="">Insônia severa</li>
+            </ul>
+        </div>
+        <div class="dicass">
+            <h2>Sinais Mentais </h2>
+            <ul>
+                <li>Ansiedade extrema quando desconectado</li>
+                <li>Perda total de controle sobre o uso</li>
+                <li> Isolamento social completo</li>
+                <li>Negligência com responsabilidades</li>
+                <li>Pensamentos obsessivos sobre telas</li>
+            </ul>
+        </div>
+    </section>
+     <section class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span>Soluções Comprovadas</span></h2>
+        <p style="margin: auto auto;">Intervenções com eficácia cientificamente comprovada</p>
+        <div class="cards">
+            <div class="card1">
+                <img style="width: 100px; margin-bottom: 10px;" src="img/sleepy (1).png" alt="">
+                <h2>Fadiga Visual</h2>
+                <p>Regra 20-20-20 + ajuste de brilho</p>
+                <a style="background-color: #7181cb; color: white; border-radius: 20px; text-decoration: none; padding: 5px;" href="questionario.html">85% eficácia</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/worktable.png" alt="">
+                <h2>Problemas de Sonos</h2>
+                <p>Modo noturno + digital sunset</p>
+                <a  style="background-color: #7181cb; color: white; border-radius: 20px; text-decoration: none; padding: 5px;" href="impactos.html">78% eficácia</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/emotion.png" alt="">
+                <h2>Ansiedade Digital</h2>
+                <p>Limites de tempo + mindfulness</p>
+                <a  style="background-color: #7181cb; color: white; border-radius: 20px; text-decoration: none; padding: 5px;" href="sugestoes.html">71% eficácia</a>
+            </div>
+             <div class="card1">
+                <img style="width: 100px;margin-bottom: 10px;" src="img/depression.png" alt="">
+                <h2>Isolamento Social</h2>
+                <p>Atividades presenciais regulares</p>
+                <a  style="background-color: #7181cb; color: white; border-radius: 20px; text-decoration: none; padding: 5px;" href="estudoebemestar.html">69% eficácia</a>
+            </div>
+        </div>
+    </section>
+      </section>
+      <section style="margin-top: 9%;" class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span style="color: #7181cb;">Curiosidade</span></h2>
+        <p style="margin: auto auto;">Estudos mostram que pequenas pausas de 5 a 10 minutos a cada hora de uso de telas podem aumentar a produtividade e reduzir a fadiga ocular. Ou seja, mesmo que passamos muito tempo conectados, fazer intervalos curtos para descansar os olhos, alongar o corpo ou apenas olhar para o ambiente ao redor ajuda o cérebro a se recuperar, melhora a concentração e até diminui o estresse. É um jeito simples de usar a tecnologia de forma mais saudável sem precisar se desconectar completamente.</p>
+     
+        
+    </section>
+    <section style="margin-top: 10%;" class="video">
+        <h2 style="text-align: center;  margin-bottom: 30px;"><span>videos sobre impactos de telas </span></h2>
+        <p style="margin-bottom: 20px;">Descubra como melhorar sua saúde, produtividade e bem-estar digital</p>
+        <div class="paia">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6yPndnSDIbc?si=hvwf-hq66lcmDItA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="frase">
+        <h2 style="border-bottom: 2px solid #7181cb ;">E como isso   <span style="color: #7181cb;">afeta</span>    os adolescentes? </h2>
+        <a href="sugestoes.html">ir para Sugestões</a>
+    </section>
+      <footer style="margin-top: 150px;">
+        <div class="redes">
+        <a href="#">
+            <img style="width: 30px;" src="img/twitter.png" alt="">
+        </a>
+        <a href="#">
+            <img style="width: 30px;" src="img/facebook.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/detoxdigital.ifc/"target="_blank">
+            <img style="width: 30px;" src="img/instagram.png" alt="">
+        </a>
+        </div>
+        <div class="mapa">
+            <a href="index.html">Início</a>
+            <a href="questionario.html">Questionário</a>
+            <a href="impactos.html">Impactos</a>
+            <a href="sugestoes.html">Sugestões</a>
+            <a href="estudoebemestar.html">Estudo & Bem-estar</a>
+        </div>
+        <p style="color: white;">©Detox Digital.Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/munu.js"></script>
+</body>
+</html>

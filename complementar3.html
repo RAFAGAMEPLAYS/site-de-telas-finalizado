@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complementar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="inicio">
+        <div class="logo">
+            <h1>DT</h1>
+            <h2>Detox Digital</h2>
+        </div>
+        <nav class="nav-bar">
+    <!-- Início -->
+    <div class="dropdown">
+        <a href="index.html" class="dropbtn">
+            Início <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </div>
+
+    <!-- Questionário -->
+    <a href="questionario.html" class="menu-link">Questionário</a>
+
+    <!-- Impactos -->
+    <div class="dropdown">
+        <a href="impactos.html" class="dropbtn">
+            Impactos <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="complementar.html">sono</a>
+            <a href="complementar2.html">saude mental</a>
+            <a href="complementar3.html">produtividade</a>
+        </div>
+    </div>
+
+    <!-- Sugestões -->
+    <div class="dropdown">
+        <a href="sugestoes.html" class="dropbtn">
+            Sugestões <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="complementar4.html">limite de tempo</a>
+            <a href="complementar5.html">pausas</a>
+            <a href="complementar6.html">telas a noite</a>
+        </div>
+    </div>
+
+    <!-- Estudo & Bem-estar -->
+    <div class="dropdown">
+        <a href="estudoebemestar.html" class="dropbtn">
+            Estudo & Bem-estar <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown-content">
+            <a href="complementar7.html">dicas</a>
+            <a href="complementar8.html">bem estar</a>
+        </div>
+    </div>
+</nav>
+
+        <div class="menu-toggle" onclick="document.querySelector('.nav-bar').classList.toggle('show')">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    </header>
+    <script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navBar = document.querySelector('.nav-bar');
+
+menuToggle.addEventListener('click', () => {
+    navBar.classList.toggle('show');
+});
+</script>
+    <main class="impact">
+        
+        <div class="prin">
+        <h1> <span style="color: #7181cb;">produtividade</span>  </h1>
+        <p class="gordo" >Produtividade é a capacidade de gerar mais resultados (bens ou serviços) em menos tempo e com menos recursos disponíveis, mantendo a qualidade.</p>
+        
+        </div>
+        
+    </main>
+    
+     <section class="resumo">
+        <h2 id="saiba" style="text-align: center; margin-top: 5%; margin-bottom: 30px;"><span>detalhes</span></h2>
+        <p style="margin: auto auto;">Produtividade é a capacidade de realizar tarefas de forma eficiente e organizada, aproveitando melhor o tempo disponível. Estar produtivo não significa trabalhar sem parar, mas sim encontrar equilíbrio entre foco, planejamento e pausas estratégicas. Criar rotinas, definir prioridades, evitar distrações e utilizar técnicas como o método Pomodoro — que intercala períodos de estudo ou trabalho com pequenos intervalos — pode aumentar significativamente o rendimento. Manter hábitos saudáveis, como dormir bem, se alimentar corretamente e controlar o tempo de tela, também é essencial para uma produtividade consistente e sustentável.</p>
+       
+        
+    </section>
+     <main class="impact">
+        
+        <div class="prin">
+       
+        <p style="color: black;">Descubra como o excesso pode afetar seu sono, produtividade e saúde mental.</p>
+        <a href="https://online.pucrs.br/blog/produtividade-carreira "target="_blank">ver mais</a>
+        </div>
+        
+    </main>
+    <section style="margin-top: 5%;" class="video">
+        <h2 style="text-align: center;  margin-bottom: 30px;"><span>videos sobre produtividade </span></h2>
+        <p style="margin-bottom: 20px;">Descubra como melhorar sua saúde, produtividade e bem-estar digital</p>
+        <div class="paia">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/U9iE090X-64?si=EE4LQh7xTFCj-XAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+     <section class="frase">
+    <h2>Voltar para <span style="color:#7181cb;">impactos </span></h2>
+    <a href="impactos.html"><i class="fa-solid fa-arrow-left"></i> voltar</a>
+  </section>
+ <footer style="margin-top: 150px;">
+        <div class="redes">
+        <a href="#">
+            <img style="width: 30px;" src="img/twitter.png" alt="">
+        </a>
+        <a href="#">
+            <img style="width: 30px;" src="img/facebook.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/detoxdigital.ifc/"target="_blank">
+            <img style="width: 30px;" src="img/instagram.png" alt="">
+        </a>
+        </div>
+        <div class="mapa">
+            <a href="index.html">Início</a>
+            <a href="questionario.html">Questionário</a>
+            <a href="impactos.html">Impactos</a>
+            <a href="sugestoes.html">Sugestões</a>
+            <a href="estudoebemestar.html">Estudo & Bem-estar</a>
+        </div>
+        <p style="color: white;">©Detox Digital.Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="js/munu.js"></script>
+</body>
+</html>
