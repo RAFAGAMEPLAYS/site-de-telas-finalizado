@@ -1,36 +1,62 @@
 // main.js — funcionalidades do site Detox Digital
 
 // --- Helpers ---
+// Atalho para selecionar 1 elemento
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
+// Atalho para selecionar vários elementos e transformar em array
 const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+// Função para checar se um valor existe e não é vazio
 function hasValue(v) { return v !== null && v !== undefined && String(v).trim() !== ''; }
 
 // --- Menu hamburguer acessível ---
 (function menuToggle() {
+  // Seleciona o botão do menu e a barra de navegação
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav-bar');
   if (!toggle || !nav) return;
 
+  // Abre o menu
   function openNav() {
     nav.classList.add('show');
-    toggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    toggle.setAttribute('aria-expanded', 'true'); // acessibilidade
+    document.body.style.overflow = 'hidden'; // impede scroll atrás do menu
   }
+
+  // Fecha o menu
   function closeNav() {
     nav.classList.remove('show');
     toggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    document.body.style.overflow = ''; // volta scroll ao normal
   }
+
+  // Alterna abrir/fechar
   function toggleNav() {
     if (nav.classList.contains('show')) closeNav();
     else openNav();
   }
 
-  toggle.addEventListener('click', (e) => { e.preventDefault(); toggleNav(); });
-  nav.addEventListener('click', (e) => { if (e.target.tagName.toLowerCase() === 'a') closeNav(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeNav(); });
-  window.addEventListener('resize', () => { if (window.innerWidth > 430) closeNav(); });
+  // Clique no botão abre/fecha
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleNav();
+  });
 
+  // Se clicou em um link dentro do menu → fecha
+  nav.addEventListener('click', (e) => {
+    if (e.target.tagName.toLowerCase() === 'a') closeNav();
+  });
+
+  // Pressionar ESC fecha o menu
+  document.addEventListener('keydown', (e) => { 
+    if (e.key === 'Escape') closeNav(); 
+  });
+
+  // Se a tela ficar grande, fecha automaticamente
+  window.addEventListener('resize', () => { 
+    if (window.innerWidth > 430) closeNav(); 
+  });
+
+  // Acessibilidade do botão
   toggle.setAttribute('role', 'button');
   toggle.setAttribute('aria-label', 'Abrir menu');
   toggle.setAttribute('aria-expanded', 'false');
@@ -40,7 +66,11 @@ function hasValue(v) { return v !== null && v !== undefined && String(v).trim() 
 (function activeNavLink() {
   const links = $$('.nav-bar a');
   if (!links.length) return;
+
+  // Pega o nome da página atual
   const path = location.pathname.split('/').pop() || 'index.html';
+
+  // Marca o link correspondente
   links.forEach(a => {
     if (a.getAttribute('href') === path) {
       a.style.borderBottom = '2px solid #7181cb';
@@ -48,16 +78,19 @@ function hasValue(v) { return v !== null && v !== undefined && String(v).trim() 
   });
 })();
 
-// --- Smooth scroll ---
+// --- Smooth scroll (rolagem suave em links âncora) ---
 (function smoothAnchors() {
   document.addEventListener('click', function (e) {
-    const a = e.target.closest('a');
+    const a = e.target.closest('a'); // pega o link mais próximo
     if (!a) return;
+
     const href = a.getAttribute('href') || '';
+
+    // Só funciona para links tipo "#alguma-coisa"
     if (href.startsWith('#') && href.length > 1) {
       const target = document.querySelector(href);
       if (target) {
-        e.preventDefault();
+        e.preventDefault(); // evita salto instantâneo
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
@@ -65,27 +98,40 @@ function hasValue(v) { return v !== null && v !== undefined && String(v).trim() 
 })();
 
 // --- Serializar formulário ---
+// Transforma um formulário HTML em um objeto JS com os valores
 function collectFormData(form) {
   const data = {};
   Array.from(form.elements).forEach(el => {
-    if (!el.name) return;
-    if (el.type === 'radio') { if (el.checked) data[el.name] = el.value; }
+    if (!el.name) return; // ignora campos sem 'name'
+
+    if (el.type === 'radio') { 
+      if (el.checked) data[el.name] = el.value;
+    }
     else if (el.type === 'checkbox') {
       if (!data[el.name]) data[el.name] = [];
       if (el.checked) data[el.name].push(el.value);
     }
-    else if (el.tagName.toLowerCase() === 'select') data[el.name] = el.value;
-    else if (el.type !== 'submit' && el.type !== 'button') data[el.name] = el.value;
+    else if (el.tagName.toLowerCase() === 'select') {
+      data[el.name] = el.value;
+    }
+    else if (el.type !== 'submit' && el.type !== 'button') {
+      data[el.name] = el.value;
+    }
   });
   return data;
 }
 
 // --- Pop-up bonito ---
 function showPopup(title, message) {
+  // Verifica se o modal já existe
   let modal = document.getElementById('dd-popup');
+
+  // Se não existir, cria um novo
   if (!modal) {
     modal = document.createElement('div');
     modal.id = 'dd-popup';
+
+    // Estilo do fundo escuro
     Object.assign(modal.style, {
       position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
       background: 'rgba(0,0,0,0.5)', display: 'flex',
@@ -93,6 +139,7 @@ function showPopup(title, message) {
       zIndex: 10000
     });
 
+    // Caixa branca do pop-up
     const box = document.createElement('div');
     box.id = 'dd-popup-box';
     Object.assign(box.style, {
@@ -105,9 +152,13 @@ function showPopup(title, message) {
     modal.appendChild(box);
     document.body.appendChild(modal);
 
-    modal.addEventListener('click', (e) => { if (e.target === modal) modal.remove(); });
+    // Se clicar fora da caixa, fecha
+    modal.addEventListener('click', (e) => { 
+      if (e.target === modal) modal.remove(); 
+    });
   }
 
+  // Atualiza conteúdo da caixa
   const box = document.getElementById('dd-popup-box');
   box.innerHTML = `
     <h3 style="color:#7181cb; margin-bottom:12px">${title}</h3>
@@ -117,8 +168,13 @@ function showPopup(title, message) {
       border:none; border-radius:6px; cursor:pointer
     ">Fechar</button>
   `;
+
+  // Animação
   box.style.transform = "scale(1)";
-  document.getElementById('close-popup').addEventListener('click', () => modal.remove());
+
+  // Botão fechar
+  document.getElementById('close-popup')
+    .addEventListener('click', () => modal.remove());
 }
 
 // --- Questionário dinâmico ---
@@ -126,11 +182,14 @@ function showPopup(title, message) {
   const form = document.getElementById('formulario');
   if (!form) return;
 
+  // Quando o formulário for enviado
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
     const data = collectFormData(form);
     let feedback = [];
 
+    // Avaliação do tempo de tela
     if (data.tempo === "mais de 6 horas") {
       feedback.push("⚠️ Você passa bastante tempo em telas. Tente reduzir para evitar cansaço mental.");
     } else if (data.tempo === "3 a 6 horas") {
@@ -139,18 +198,21 @@ function showPopup(title, message) {
       feedback.push("✅ Ótimo! Seu tempo em telas está dentro de um limite saudável.");
     }
 
+    // Impacto no sono
     if (data.impacto === "sim") {
       feedback.push("Evite telas antes de dormir, isso pode melhorar sua qualidade de sono.");
     } else if (data.impacto === "nao") {
       feedback.push("Muito bem! Continue mantendo bons hábitos de sono.");
     }
 
+    // Controle de uso
     if (data.controle === "sim") {
       feedback.push("Parabéns por já controlar seu uso de telas.");
     } else if (data.controle === "nao") {
       feedback.push("Considere usar aplicativos de controle de tempo para ajudar na disciplina.");
     }
 
+    // Mostra resultado
     showPopup("Resultado do Questionário", feedback.join("<br>"));
   });
 })();
@@ -162,6 +224,7 @@ function showPopup(title, message) {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
     const data = collectFormData(form);
     let feedback = [];
 
@@ -213,7 +276,8 @@ function showPopup(title, message) {
     showPopup("💡 Dica Extra", dica);
   });
 })();
-// --- Pop-ups automáticos (dicas constantes) ---
+
+// --- Pop-ups automáticos (mostram mensagens a cada 1 min) ---
 (function autoPopups() {
   const mensagens = [
     "💡 Lembre-se: faça pausas curtas a cada 50 minutos de estudo.",
@@ -224,13 +288,15 @@ function showPopup(title, message) {
   ];
 
   let i = 0;
+
+  // Exibe mensagens de 60 em 60 segundos
   setInterval(() => {
     showPopup("Dica Automática", mensagens[i]);
-    i = (i + 1) % mensagens.length; // volta pro início quando chega no fim
-  }, 60000); // aparece a cada 60 segundos (pode mudar o valor)
+    i = (i + 1) % mensagens.length; // reinicia quando chega no fim
+  }, 60000);
 })();
 
-// menu.js
+// menu.js — alterna o menu quando clicar no botão
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navBar = document.querySelector('.nav-bar');
@@ -241,5 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
 
 
