@@ -1,76 +1,76 @@
 // main.js — funcionalidades do site Detox Digital
 
 // --- Helpers ---
-// Atalho para selecionar 1 elemento
-const $ = (sel, ctx = document) => ctx.querySelector(sel);
-// Atalho para selecionar vários elementos e transformar em array
-const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
-// Função para checar se um valor existe e não é vazio
-function hasValue(v) { return v !== null && v !== undefined && String(v).trim() !== ''; }
+
+const $ = (sel, ctx = document) => ctx.querySelector(sel); // esse vai pegar um elemento
+
+const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));// isso vai pegar tds os elementos desse tipo e vai trasformar num array
+
+function hasValue(v) { return v !== null && v !== undefined && String(v).trim() !== ''; } // vai ver se ta vazio ou n 
 
 // --- Menu hamburguer acessível ---
 (function menuToggle() {
-  // Seleciona o botão do menu e a barra de navegação
+  // é pra clicar o botão do menu e a barra de navegação
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav-bar');
   if (!toggle || !nav) return;
 
-  // Abre o menu
+  // abre o menu
   function openNav() {
     nav.classList.add('show');
-    toggle.setAttribute('aria-expanded', 'true'); // acessibilidade
-    document.body.style.overflow = 'hidden'; // impede scroll atrás do menu
+    toggle.setAttribute('aria-expanded', 'true'); // da acessibilidade (meio que uma responsividade pro menu )
+    document.body.style.overflow = 'hidden'; // proibe de usar o scroll fora do menu
   }
 
-  // Fecha o menu
+  // fecha o menu
   function closeNav() {
     nav.classList.remove('show');
     toggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = ''; // volta scroll ao normal
+    document.body.style.overflow = ''; // volta o scroll ao normal
   }
 
-  // Alterna abrir/fechar
+  // alterna entre abrir/fechar
   function toggleNav() {
     if (nav.classList.contains('show')) closeNav();
     else openNav();
   }
 
-  // Clique no botão abre/fecha
+  // clica no botão abre/fecha
   toggle.addEventListener('click', (e) => {
     e.preventDefault();
     toggleNav();
   });
 
-  // Se clicou em um link dentro do menu → fecha
+  // se clica em um link dentro do menu -> fecha o menu
   nav.addEventListener('click', (e) => {
     if (e.target.tagName.toLowerCase() === 'a') closeNav();
   });
 
-  // Pressionar ESC fecha o menu
+  // se apertar ESC fecha o menu
   document.addEventListener('keydown', (e) => { 
     if (e.key === 'Escape') closeNav(); 
   });
 
-  // Se a tela ficar grande, fecha automaticamente
+  // se a tela ficar grande, fecha o menu
   window.addEventListener('resize', () => { 
     if (window.innerWidth > 430) closeNav(); 
   });
 
-  // Acessibilidade do botão
+  // acessibilidade do botão (cm vai funcioner)
   toggle.setAttribute('role', 'button');
   toggle.setAttribute('aria-label', 'Abrir menu');
   toggle.setAttribute('aria-expanded', 'false');
 })();
 
-// --- Destacar link ativo no menu ---
+// --- destacar link ativo no menu ---
 (function activeNavLink() {
   const links = $$('.nav-bar a');
   if (!links.length) return;
 
-  // Pega o nome da página atual
+  // pega o nome da pagina atual
   const path = location.pathname.split('/').pop() || 'index.html';
 
-  // Marca o link correspondente
+  // marca o link de acordo com a pagina que vc ta
   links.forEach(a => {
     if (a.getAttribute('href') === path) {
       a.style.borderBottom = '2px solid #7181cb';
@@ -78,7 +78,7 @@ function hasValue(v) { return v !== null && v !== undefined && String(v).trim() 
   });
 })();
 
-// --- Smooth scroll (rolagem suave em links âncora) ---
+// --- smooth scroll (rolagem suave e dboa em links tipo ancora) ---
 (function smoothAnchors() {
   document.addEventListener('click', function (e) {
     const a = e.target.closest('a'); // pega o link mais próximo
@@ -86,11 +86,11 @@ function hasValue(v) { return v !== null && v !== undefined && String(v).trim() 
 
     const href = a.getAttribute('href') || '';
 
-    // Só funciona para links tipo "#alguma-coisa"
+    // so funciona para links tipo "#alguma-coisa"
     if (href.startsWith('#') && href.length > 1) {
       const target = document.querySelector(href);
       if (target) {
-        e.preventDefault(); // evita salto instantâneo
+        e.preventDefault(); // evita salto instantaneo
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
@@ -98,11 +98,11 @@ function hasValue(v) { return v !== null && v !== undefined && String(v).trim() 
 })();
 
 // --- Serializar formulário ---
-// Transforma um formulário HTML em um objeto JS com os valores
+// transforma um formulário HTML em um objeto JS com os valores
 function collectFormData(form) {
   const data = {};
   Array.from(form.elements).forEach(el => {
-    if (!el.name) return; // ignora campos sem 'name'
+    if (!el.name) return; // ignora campos sem o 'name'
 
     if (el.type === 'radio') { 
       if (el.checked) data[el.name] = el.value;
@@ -123,15 +123,15 @@ function collectFormData(form) {
 
 // --- Pop-up bonito ---
 function showPopup(title, message) {
-  // Verifica se o modal já existe
+  // ve se o modal já existe
   let modal = document.getElementById('dd-popup');
 
-  // Se não existir, cria um novo
+  // se não existir, cria um novo
   if (!modal) {
     modal = document.createElement('div');
     modal.id = 'dd-popup';
 
-    // Estilo do fundo escuro
+    // estilo do fundo escuro
     Object.assign(modal.style, {
       position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
       background: 'rgba(0,0,0,0.5)', display: 'flex',
@@ -139,7 +139,7 @@ function showPopup(title, message) {
       zIndex: 10000
     });
 
-    // Caixa branca do pop-up
+    // deixa a caixa branca do pop-up
     const box = document.createElement('div');
     box.id = 'dd-popup-box';
     Object.assign(box.style, {
@@ -152,13 +152,13 @@ function showPopup(title, message) {
     modal.appendChild(box);
     document.body.appendChild(modal);
 
-    // Se clicar fora da caixa, fecha
+    // se clicar fora da caixa, ele fecha
     modal.addEventListener('click', (e) => { 
       if (e.target === modal) modal.remove(); 
     });
   }
 
-  // Atualiza conteúdo da caixa
+  // atualiza conteudo da caixa
   const box = document.getElementById('dd-popup-box');
   box.innerHTML = `
     <h3 style="color:#7181cb; margin-bottom:12px">${title}</h3>
@@ -169,10 +169,10 @@ function showPopup(title, message) {
     ">Fechar</button>
   `;
 
-  // Animação
+  // animação
   box.style.transform = "scale(1)";
 
-  // Botão fechar
+  // botão fechar
   document.getElementById('close-popup')
     .addEventListener('click', () => modal.remove());
 }
@@ -182,14 +182,14 @@ function showPopup(title, message) {
   const form = document.getElementById('formulario');
   if (!form) return;
 
-  // Quando o formulário for enviado
+  // quando o formulário for enviado
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const data = collectFormData(form);
     let feedback = [];
 
-    // Avaliação do tempo de tela
+    // avaliação do tempo de tela
     if (data.tempo === "mais de 6 horas") {
       feedback.push("⚠️ Você passa bastante tempo em telas. Tente reduzir para evitar cansaço mental.");
     } else if (data.tempo === "3 a 6 horas") {
@@ -198,21 +198,21 @@ function showPopup(title, message) {
       feedback.push("✅ Ótimo! Seu tempo em telas está dentro de um limite saudável.");
     }
 
-    // Impacto no sono
+    // impacto no sono
     if (data.impacto === "sim") {
       feedback.push("Evite telas antes de dormir, isso pode melhorar sua qualidade de sono.");
     } else if (data.impacto === "nao") {
       feedback.push("Muito bem! Continue mantendo bons hábitos de sono.");
     }
 
-    // Controle de uso
+    // controle de uso das telas
     if (data.controle === "sim") {
       feedback.push("Parabéns por já controlar seu uso de telas.");
     } else if (data.controle === "nao") {
       feedback.push("Considere usar aplicativos de controle de tempo para ajudar na disciplina.");
     }
 
-    // Mostra resultado
+    // mostra resultado no tipo pop up
     showPopup("Resultado do Questionário", feedback.join("<br>"));
   });
 })();
@@ -272,6 +272,7 @@ function showPopup(title, message) {
   ];
 
   btn.addEventListener('click', () => {
+    // quando vc apertar o botão vai pegar uma dica aleatoria entre as de cima
     const dica = dicas[Math.floor(Math.random() * dicas.length)];
     showPopup("💡 Dica Extra", dica);
   });
@@ -280,16 +281,16 @@ function showPopup(title, message) {
 // --- Pop-ups automáticos (mostram mensagens a cada 1 min) ---
 (function autoPopups() {
   const mensagens = [
-    "💡 Lembre-se: faça pausas curtas a cada 50 minutos de estudo.",
-    "⚠️ Evite telas 1h antes de dormir para melhorar seu sono.",
-    "✅ Beba água! Hidratação melhora a concentração.",
-    "📴 Experimente um momento offline para descansar a mente.",
-    "🧘 Alongue-se! Movimentar o corpo reduz o cansaço mental."
+    " Lembre-se: faça pausas curtas a cada 50 minutos de estudo.",
+    " Evite telas 1h antes de dormir para melhorar seu sono.",
+    " Beba água! Hidratação melhora a concentração.",
+    " Experimente um momento offline para descansar a mente.",
+    " Alongue-se! Movimentar o corpo reduz o cansaço mental."
   ];
 
   let i = 0;
 
-  // Exibe mensagens de 60 em 60 segundos
+  // mostra uma msg de 60 em 60 seg (1 min)
   setInterval(() => {
     showPopup("Dica Automática", mensagens[i]);
     i = (i + 1) % mensagens.length; // reinicia quando chega no fim
@@ -307,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
 
 
