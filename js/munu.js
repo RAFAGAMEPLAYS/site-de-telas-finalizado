@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // garante que ambos os elementos existem antes de adicionar eventos
     if(menuToggle && navBar){
 
-        // Quando o botão for clicado...
+        // quando o botão for clicado...
         menuToggle.addEventListener('click', () => {
 
             // alterna a classe "show" no menu.
@@ -22,5 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
 
