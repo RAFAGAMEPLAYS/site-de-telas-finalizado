@@ -8,6 +8,7 @@ body{
     height: 100vh;
     background-color: white;
     font-family: "Roboto", sans-serif;
+    width: 100%;
 }
 header{
     display: flex;
@@ -1028,4 +1029,5 @@ button:hover {
 
 
     
+
     
