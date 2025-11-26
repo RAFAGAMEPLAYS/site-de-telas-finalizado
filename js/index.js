@@ -193,23 +193,23 @@ function showPopup(title, message) {
     if (data.tempo === "mais de 6 horas") {
       feedback.push("⚠️ Você passa bastante tempo em telas. Tente reduzir para evitar cansaço mental.");
     } else if (data.tempo === "3 a 6 horas") {
-      feedback.push("Seu tempo em telas é moderado, mas cuidado para não aumentar.");
+      feedback.push("⚠️Seu tempo em telas é moderado, mas cuidado para não aumentar.");
     } else if (data.tempo) {
       feedback.push("✅ Ótimo! Seu tempo em telas está dentro de um limite saudável.");
     }
 
     // impacto no sono
     if (data.impacto === "sim") {
-      feedback.push("Evite telas antes de dormir, isso pode melhorar sua qualidade de sono.");
+      feedback.push("⚠️Evite telas antes de dormir, isso pode melhorar sua qualidade de sono.");
     } else if (data.impacto === "nao") {
-      feedback.push("Muito bem! Continue mantendo bons hábitos de sono.");
+      feedback.push("✅Muito bem! Continue mantendo bons hábitos de sono.");
     }
 
     // controle de uso das telas
     if (data.controle === "sim") {
-      feedback.push("Parabéns por já controlar seu uso de telas.");
+      feedback.push("✅Parabéns por já controlar seu uso de telas.");
     } else if (data.controle === "nao") {
-      feedback.push("Considere usar aplicativos de controle de tempo para ajudar na disciplina.");
+      feedback.push("⚠️Considere usar aplicativos de controle de tempo para ajudar na disciplina.");
     }
 
     // mostra resultado no tipo pop up
@@ -235,15 +235,15 @@ function showPopup(title, message) {
     }
 
     if (data.foco === "menos de 30 minutos") {
-      feedback.push("Tente usar a técnica Pomodoro para aumentar seu tempo de foco.");
+      feedback.push("⚠️Tente usar a técnica Pomodoro para aumentar seu tempo de foco.");
     } else if (data.foco === "30 a 60 minutos") {
-      feedback.push("Bom tempo de foco! Você pode tentar aumentar gradualmente.");
+      feedback.push("✅Bom tempo de foco! Você pode tentar aumentar gradualmente.");
     } else if (data.foco === "mais de 1 hora") {
-      feedback.push("Excelente foco! Só não esqueça das pausas para evitar sobrecarga.");
+      feedback.push("✅Excelente foco! Só não esqueça das pausas para evitar sobrecarga.");
     }
 
     if (Array.isArray(data.atividades) && data.atividades.length > 0) {
-      feedback.push("Ótimo que você pratica: " + data.atividades.join(", ") + ".");
+      feedback.push("✅Ótimo que você pratica: " + data.atividades.join(", ") + ".");
     } else {
       feedback.push("⚠️ Considere incluir atividades de relaxamento no seu dia a dia.");
     }
@@ -308,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
 
 
