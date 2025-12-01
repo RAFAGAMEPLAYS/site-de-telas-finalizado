@@ -1,135 +1,166 @@
- 09/07/2025
+# Projeto: Uso Equilibrado de Telas – Detox Digital
 
+Repositório oficial do site desenvolvido pela equipe para conscientização sobre o uso saudável de telas.
 
-Faltantes: Tiago Cardoso.
+#  Integrantes da Equipe
 
+Felipe Hodecker – HTML e CSS
 
-Presentes: Felipe;Kauan,Nicholas e Rafael.
+Kauan Gunther – Redes sociais e CSS interno
 
+Nicholas Oyafuso – JavaScript
 
-Conteúdo Abordado: A escolha do tema feita pela equipe neste mesmo dia com os integrantes: Kauan Gunther, Felipe Hodecker, Nicholas Oyafuso, Tiago Cardoso e Rafael Xavier, foi: Uso Equilibrado de Telas. Aproveitamos a aula para discutir sobre como realizaríamos o trabalho.
+Tiago Cardoso – Design e ATA
 
+Rafael Xavier – CSS externo e responsividade
 
-16/07/2025
+#  Objetivo do Projeto
 
+Criar um site informativo e interativo que conscientize as pessoas sobre o uso equilibrado de telas, oferecendo dicas, reflexões, prevenções e conteúdos educativos por meio do site e das redes sociais.
 
-Faltantes: Nicholas.
+#  Cronograma de Desenvolvimento (Resumo da ATA)
+09/07/2025 – Escolha do Tema
 
+Tema definido: Uso Equilibrado de Telas.
 
-Presentes: Rafael,Tiago,Kauan e Felipe.
+Discussão sobre o direcionamento do trabalho.
 
+///////////////////////////////////////////////////////////////////////////////////////////////
 
-Conteúdo abordado : Design do Site.Onde fizemos uma reunião definindo o Nicholas para cuidar do JavaScript. Também criamos um instagram, Para fazer algumas postagens sobre o Trabalho,como: Dicas e Prevenções que devemos Fazer para Evitar o Uso excessivo Das Telas. 
+16/07/2025 – Início do Design do Site
 
+Definição do Nicholas como responsável pelo JavaScript.
 
-23/08/2025
+Criação do Instagram para divulgar dicas e prevenções.
 
+///////////////////////////////////////////////////////////////////////////////////////////////
 
-Faltantes: Tiago,Nicholas,Rafael e Kauan.
+23/08/2025 – Reunião Parcial
 
+Apenas Felipe presente.
 
-Presentes: Felipe
+Nenhum avanço prático no projeto.
 
+///////////////////////////////////////////////////////////////////////////////////////////////
 
-Assunto abordado : Nenhum.
+27/08/2025 – Finalização Visual
 
+Escolha das imagens dos integrantes.
 
-27/08/2025
+Design visual concluído.
 
+Criação e personalização de Facebook e Instagram.
 
-Faltantes: Ninguém.
+Redes sociais linkadas ao HTML.
 
+///////////////////////////////////////////////////////////////////////////////////////////////
 
-Presentes:Tiago,Nicholas,Rafael,Kauan e Felipe .
+03/09/2025 – Divisão Geral de Tarefas
 
+Kauan → Redes sociais + CSS interno
 
-Conteúdo Abordado:Finalizamos a parte visual do projeto, escolhemos a imagem de cada integrante e definimos o design do site. Criamos e personalizamos o Facebook e o Instagram, planejando novas publicações. Por fim, linkamos todas as redes sociais no nosso HTML.
+Tiago → Design + ATA
 
+Felipe → HTML + CSS
 
-03/09/2025
+Nicholas → JavaScript
 
+Rafael → CSS externo
 
-Faltantes : Ninguém.
 
+///////////////////////////////////////////////////////////////////////////////////////////////
 
-Presentes:Tiago,Nicholas,Rafael,Kauan e Felipe .
 
+10/09/2025 – Conteúdos nas Redes Sociais
 
-Assuntos abordados:Kauan ficou responsavel pelas redes sociais e pelo CSS interno. tiago pelo dising e pela ata, o Felipe pelo html e css, nicholas pelo JavaScript, e por fim o rafael com o css externo.
+Tiago e Kauan fizeram novas postagens.
 
+Felipe e Rafael revisaram HTML e CSS.
 
-10/09/2025
+///////////////////////////////////////////////////////////////////////////////////////////////
 
+16/09/2025 – Inicialização do Site
 
-Faltantes: Ninguém.
+Início das postagens no Facebook.
 
+Criação de novas artes para redes sociais no Canva.
 
-Presentes: Tiago,Kauan,Rafael,Nicholas e Felipe.
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 
-Assuntos abordados:Tiago e Kauan ,realizaram mais postagens nas redes sociais do Facebook e Instagram , postagens que abordam a reflexão do tempo desperdiçado no uso excessivo de telas de Felipe e Rafael estavam revisando o Html e Css das páginas do Detox Digital.
+17/09/2025 – Colaboração Geral
 
+Todos ajudaram na criação e edição de postagens.
 
-16/09/2025
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 
-Presentes:Tiago,Nicholas,Rafael,Kauan e  Felipe
+29/10/2025 – Ajustes no Questionário
 
+Correção da questão 3.
 
-Assuntos abordados: A inicialização do site e o início das postagens do Facebook e mais postagens do instaqgram e ajeitamos mais postagens para as redes sociais no canva .
+Alteração da categoria "Redes Sociais" para "Entretenimento".
 
+Ajuste de item sobre "Falta de uso de telas".
 
-17/09/2025
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 
-Faltantes: Ninguém
+05/11/2025 – Responsividade
 
+Rafael e Felipe trabalharam na responsividade.
 
-Presentes : Tiago , Nicholas , Felipe, Kauan e Rafael.
+Restante das tarefas finalizadas.
 
+///////////////////////////////////////////////////////////////////////////////////////////////
 
-Assunto abordado :  Todos do grupo estavam ajudando nas postagens nas redes sociais do Facebook e do Instagram e na edição das postagens desde das mensagens para escrevermos até nas imagens para serem colocadas nos posts
+12/11/2025 – Revisão Ortográfica
 
+Ajuste de ortografia e links do site.
 
-29/10/2025
+///////////////////////////////////////////////////////////////////////////////////////////////
 
+19/11/2025 – Continuação da Revisão
 
-presentes : todos.
+Finalização das revisões e melhorias.
 
+///////////////////////////////////////////////////////////////////////////////////////////////
 
-O que fazer no questionário : Trocar a segunda opção da número 3 Não preciso disso 
+22/11/2025 – Melhorias Finais
 
-5 Tirar a redes sociais e colocá-la em entretenimento 
+Ajustes de semântica no HTML após feedback do professor Kennedy.
 
-6 falta de uso de telas 
+#  Redes Sociais do Projeto
 
-  
+(adicione os links reais quando tiver)
 
-05/11/2025
+Instagram: link aqui
 
-presentes : todos
+Facebook: link aqui
 
+#  Tecnologias Utilizadas
 
-Assuntos abordados:O Rafael estava fazendo a responsividade junto com o Felipe, o resto estava pronto.
+HTML5
 
+CSS3 (Interno e Externo)
 
-12/11/2025
+JavaScript
 
-presentes:todos
+Ferramentas de Design: Canva
 
+Plataformas: GitHub, Instagram, Facebook
 
-assunto abordado: Todos estavam arrumando a ortografia do site e linkando as redes sociais no site e redes socias .
+#  Status do Projeto
 
-19/11/2025
+✔ Finalizado
+✔ Revisado
+✔ Redes sociais integradas
+✔ Melhorias concluídas
 
-presentes : todos.
 
-assunto abordado : continuação do dia 12/11.
+Abra o arquivo index.html no navegador.
 
-22/11/2025
+#  Contribuições
 
-Presentes : todos 
-
-
-assunto abordado : estamos melhorando a ortografia do site a semântica do html deposis da avaliação do prof Kennedy , e estamos terminando as melhorias.
-
+Pull Requests são bem-vindos!
+Sugestões podem ser enviadas na aba Issues.
