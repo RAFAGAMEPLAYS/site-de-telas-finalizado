@@ -152,13 +152,13 @@ Plataformas: GitHub, Instagram, Facebook
 
 #  Status do Projeto
 
-✔ Finalizado
-✔ Revisado
-✔ Redes sociais integradas
+✔ Finalizado<br>
+✔ Revisado<br>
+✔ Redes sociais integradas<br>
 ✔ Melhorias concluídas
 
 
-Abra o arquivo index.html no navegador.
+
 
 #  Contribuições
 
