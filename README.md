@@ -39,7 +39,7 @@ Criação do Instagram para divulgar dicas e prevenções.
 
 Apenas Felipe presente.
 
-Nenhum avanço prático no projeto.
+apenas correções no html.
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -65,7 +65,7 @@ Felipe → HTML + CSS
 
 Nicholas → JavaScript
 
-Rafael → CSS externo
+Rafael → CSS externo + responsividade
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
