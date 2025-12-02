@@ -132,11 +132,9 @@ Ajustes de semântica no HTML após feedback do professor Kennedy.
 
 #  Redes Sociais do Projeto
 
-(adicione os links reais quando tiver)
+Instagram: https://www.instagram.com/detoxdigital.ifc/
 
-Instagram: link aqui
-
-Facebook: link aqui
+Facebook:https://www.facebook.com/profile.php?id=61577310484519&locale=pt_BR
 
 #  Tecnologias Utilizadas
 
